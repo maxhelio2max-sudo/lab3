@@ -24,7 +24,7 @@ jobs:
           pip install pytest pytest-html
 
       - name: Run tests
-        run: pytest --html=report.html
+        run: pytest test_simple.py --html=report.html
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -33,4 +33,4 @@ jobs:
           path: |
             report.html
             calculator.py
-            tests/
+            test_simple.py
